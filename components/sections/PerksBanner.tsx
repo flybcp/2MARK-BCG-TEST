@@ -1,0 +1,3 @@
+import Image from "next/image";
+import Link from "next/link";
+export function PerksBanner(){return <section className="bcg-cabin"><Image src="/hero-business-class-cabin.webp" alt="Spacious premium airline cabin" fill sizes="100vw" className="object-cover"/><div className="bcg-cabin-shade"/><div className="bcg-container bcg-cabin-copy"><p className="bcg-eyebrow">MORE THAN A SEAT</p><h2 className="bcg-section-title">Make the journey<br/><em>part of the experience.</em></h2><p>More room to unwind. More time for yourself.<br/>Find a flight you’ll look forward to.</p><Link className="bcg-button bcg-button-gold" href="/get-a-quote">Explore my options <span aria-hidden>↗</span></Link></div></section>;}

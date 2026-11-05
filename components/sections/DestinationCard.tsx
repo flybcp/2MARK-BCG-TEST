@@ -1,0 +1,4 @@
+import Image from "next/image";
+import Link from "next/link";
+export type DestinationCardProps={city:string;country:string;tagline:string;href:string;imageSrc:string;imageAlt:string};
+export function DestinationCard({city,country,href,imageSrc,imageAlt}:DestinationCardProps){return <article className="bcg-destination-card"><Link href={href} aria-label={`Explore business class flights to ${city}`}><Image src={imageSrc} alt={imageAlt} fill sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 100vw" className="object-cover"/><span className="bcg-destination-shade"/><span className="bcg-destination-country">{country}</span><span className="bcg-destination-bottom"><span><h3>{city}</h3><small>Explore your next journey</small></span><span className="bcg-circle-arrow" aria-hidden>↗</span></span></Link></article>;}

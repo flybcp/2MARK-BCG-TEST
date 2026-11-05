@@ -1,0 +1,5 @@
+import Link from "next/link";
+import {getAllDestinations} from "@/content/destinations";
+import {destinationToCardProps} from "@/lib/destination-to-card";
+import {DestinationCarousel} from "./DestinationCarousel";
+export function DestinationGrid(){const all=getAllDestinations();const order=["london","paris","tokyo"];const destinations=[...all].sort((a,b)=>(order.includes(a.slug)?order.indexOf(a.slug):10)-(order.includes(b.slug)?order.indexOf(b.slug):10)).map(destinationToCardProps);return <section id="destinations" className="bcg-section bcg-ivory"><div className="bcg-container"><div className="bcg-section-header"><div><p className="bcg-eyebrow">A LITTLE INSPIRATION</p><h2 className="bcg-section-title">Where will you go <em>next?</em></h2></div><p>Familiar favourites. New discoveries.<br/>All worth the journey.</p></div><DestinationCarousel destinations={destinations}/><p className="bcg-destination-note">Your destination isn’t here? <Link href="/get-a-quote">Tell us where you’d like to go ↗</Link></p></div></section>;}
